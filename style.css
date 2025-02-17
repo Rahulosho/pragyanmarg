@@ -153,6 +153,10 @@ CSS STRUCTURE:
   align-items: center;
 }
 
+
+
+
+
 /* feautres section end  */
 
 
@@ -252,11 +256,100 @@ CSS STRUCTURE:
   /* Encapsulating styles for the specific carousel */
 
 
-
+  @media (max-width: 480px) {
+    .responsive-heading {
+      font-size: 2.0rem; /* Even smaller on very small screens */
+    }
+  }
   
 /* 4 div section end */
 /* 4 div section end */
 /* 4 div section end */
+
+/* call icon */
+/* Add this to your CSS file */
+/* Add this to your CSS file */
+.call-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #FF5722; /* Vibrant orange color */
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  overflow: hidden; /* Important for the ripple effect */
+}
+
+.call-button:hover {
+  background-color: #E64A19; /* Darker orange for hover state */
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+.call-button i {
+  font-size: 24px;
+  position: relative;
+  z-index: 2;
+  animation: pulse 1.5s infinite;
+}
+
+/* Continuous pulse animation for the icon */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Ripple effect for enhanced visual appeal */
+.ripple {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  animation: ripple-effect 2s infinite;
+  z-index: 1;
+}
+
+@keyframes ripple-effect {
+  0% {
+    transform: scale(0);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+/* Responsive positioning for larger devices */
+@media (min-width: 992px) {
+  .call-button {
+    bottom: 40px; /* Move higher up on larger screens */
+    right: 40px;
+  }
+}
+
+/* Position even higher for very large screens */
+@media (min-width: 1400px) {
+  .call-button {
+    bottom: 60px;
+    right: 60px;
+  }
+}/* call icpon end  */
 
 
 
