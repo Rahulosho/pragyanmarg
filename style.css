@@ -260,6 +260,10 @@ CSS STRUCTURE:
     .responsive-heading {
       font-size: 2.0rem; /* Even smaller on very small screens */
     }
+    .picturecar{
+      padding: 0rem;
+    }
+    
   }
   
 /* 4 div section end */
